@@ -4,7 +4,7 @@ from lib.album import Album
 def test_album_list_all(db_connection):
     db_connection.seed("seeds/music_library.sql")
     repository = AlbumRepository(db_connection)
-    result = repository.all
+    result = repository.all()
     assert result == [
         Album(1,'Doolittle',1989,1),
         Album(2,'Surfer Rosa', 1988, 1),
